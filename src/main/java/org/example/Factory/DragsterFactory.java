@@ -1,9 +1,12 @@
 package org.example.Factory;
 
+import lombok.Builder;
 import org.example.Entity.Voiture;
 
-public abstract class DragsterFactory extends VoitureFactory{
-    public Voiture createDragster() {
+public class DragsterFactory extends VoitureFactory{
+
+    @Override
+    public Voiture createVoiture(Voiture builder) {
         return Voiture.builder().build();
     }
 }
